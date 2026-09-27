@@ -1,0 +1,65 @@
+cmake:
+  application:
+    configuration-dir: '/home/puneeth/renode-bringup-project/zephyr_app'
+    source-dir: '/home/puneeth/renode-bringup-project/zephyr_app'
+  board:
+    name: 'stm32h7_renode_reference_board'
+    path:
+     - '/home/puneeth/zephyrproject/zephyr/boards/antmicro/stm32h7_renode_reference_board'
+    qualifiers: 'stm32h753xx'
+    revision: ''
+  devicetree:
+    bindings-dirs:
+     - '/home/puneeth/renode-bringup-project/zephyr_app/dts/bindings'
+     - '/home/puneeth/zephyrproject/zephyr/dts/bindings'
+    files:
+     - '/home/puneeth/zephyrproject/zephyr/boards/antmicro/stm32h7_renode_reference_board/stm32h7_renode_reference_board.dts'
+     - '/home/puneeth/renode-bringup-project/zephyr_app/boards/stm32h7_renode_reference_board.overlay'
+    include-dirs:
+     - '/home/puneeth/renode-bringup-project/zephyr_app/dts'
+     - '/home/puneeth/zephyrproject/modules/hal/ambiq/dts'
+     - '/home/puneeth/zephyrproject/modules/hal/atmel/include'
+     - '/home/puneeth/zephyrproject/modules/hal/bouffalolab/include'
+     - '/home/puneeth/zephyrproject/modules/hal/bouffalolab/include/zephyr'
+     - '/home/puneeth/zephyrproject/modules/hal/gigadevice/include'
+     - '/home/puneeth/zephyrproject/modules/hal/infineon/dts'
+     - '/home/puneeth/zephyrproject/modules/hal/microchip/include'
+     - '/home/puneeth/zephyrproject/modules/hal/microchip/dts'
+     - '/home/puneeth/zephyrproject/modules/hal/nuvoton/dts'
+     - '/home/puneeth/zephyrproject/modules/hal/nxp/dts'
+     - '/home/puneeth/zephyrproject/modules/hal/stm32/dts'
+     - '/home/puneeth/zephyrproject/modules/hal/ti/dts'
+     - '/home/puneeth/zephyrproject/zephyr/include'
+     - '/home/puneeth/zephyrproject/zephyr/include/zephyr'
+     - '/home/puneeth/zephyrproject/zephyr/dts/common'
+     - '/home/puneeth/zephyrproject/zephyr/dts/vendor'
+     - '/home/puneeth/zephyrproject/zephyr/dts/tricore'
+     - '/home/puneeth/zephyrproject/zephyr/dts/rx'
+     - '/home/puneeth/zephyrproject/zephyr/dts/x86'
+     - '/home/puneeth/zephyrproject/zephyr/dts/xtensa'
+     - '/home/puneeth/zephyrproject/zephyr/dts/sparc'
+     - '/home/puneeth/zephyrproject/zephyr/dts/riscv'
+     - '/home/puneeth/zephyrproject/zephyr/dts/posix'
+     - '/home/puneeth/zephyrproject/zephyr/dts/arm64'
+     - '/home/puneeth/zephyrproject/zephyr/dts/arm'
+     - '/home/puneeth/zephyrproject/zephyr/dts/arc'
+     - '/home/puneeth/zephyrproject/zephyr/dts'
+    user-files:
+     - '/home/puneeth/renode-bringup-project/zephyr_app/boards/stm32h7_renode_reference_board.overlay'
+  kconfig:
+    files:
+     - '/home/puneeth/zephyrproject/zephyr/boards/antmicro/stm32h7_renode_reference_board/stm32h7_renode_reference_board_defconfig'
+     - '/home/puneeth/renode-bringup-project/zephyr_app/prj.conf'
+    user-files:
+     - '/home/puneeth/renode-bringup-project/zephyr_app/prj.conf'
+  toolchain:
+    name: 'zephyr'
+    path: '/home/puneeth/zephyr-sdk-1.0.1'
+  zephyr:
+    version: '4.4.99'
+    zephyr-base: '/home/puneeth/zephyrproject/zephyr'
+version: '0.1.0'
+west:
+  command: '/home/puneeth/zephyrproject/.venv/bin/west build -p always -b stm32h7_renode_reference_board -s /home/puneeth/renode-bringup-project/zephyr_app -d /home/puneeth/renode-bringup-project/zephyr_app/build'
+  topdir: '/home/puneeth/zephyrproject'
+  version: '1.5.0'

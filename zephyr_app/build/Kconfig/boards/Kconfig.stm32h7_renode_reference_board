@@ -1,0 +1,2 @@
+# Load board Kconfig descriptions.
+osource "/home/puneeth/zephyrproject/zephyr/boards/antmicro/stm32h7_renode_reference_board/Kconfig.stm32h7_renode_reference_board"

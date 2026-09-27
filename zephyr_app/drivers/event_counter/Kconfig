@@ -1,0 +1,18 @@
+config EVENT_COUNTER
+	bool "Event counter driver"
+	default y
+	depends on DT_HAS_ZEPHYR_EVENT_COUNTER_ENABLED
+	help
+	  Enable driver for the custom simulated event counter peripheral.
+
+if EVENT_COUNTER
+
+config EVENT_COUNTER_INIT_PRIORITY
+	int "Event counter init priority"
+	default 90
+
+module = EVENT_COUNTER
+module-str = event counter
+source "subsys/logging/Kconfig.template.log_config"
+
+endif # EVENT_COUNTER

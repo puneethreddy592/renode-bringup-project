@@ -1,0 +1,2 @@
+# Load Zephyr board defconfig descriptions.
+osource "/home/puneeth/zephyrproject/zephyr/boards/antmicro/stm32h7_renode_reference_board/Kconfig.defconfig"

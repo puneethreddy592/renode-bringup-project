@@ -1,0 +1,9 @@
+description: Custom simulated event-counter peripheral (Renode)
+
+compatible: "zephyr,event-counter"
+
+include: base.yaml
+
+properties:
+  reg:
+    required: true

@@ -1,0 +1,48 @@
+# Available runners configured by board.cmake.
+runners:
+- openocd
+- renode
+- renode-robot
+
+# Default flash runner if --runner is not given.
+flash-runner: openocd
+
+# Default debug runner if --runner is not given.
+debug-runner: openocd
+
+# Default simulation runner if --runner is not given.
+sim-runner: renode
+
+# Default test runner if --runner is not given.
+robot-runner: renode-robot
+
+# Common runner configuration values.
+config:
+  board_dir: /home/puneeth/zephyrproject/zephyr/boards/antmicro/stm32h7_renode_reference_board
+  # Build outputs:
+  elf_file: zephyr.elf
+  hex_file: zephyr.hex
+  bin_file: zephyr.bin
+  # Host tools:
+  gdb: /home/puneeth/zephyr-sdk-1.0.1/gnu/arm-zephyr-eabi/bin/arm-zephyr-eabi-gdb
+  openocd: /home/puneeth/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/bin/openocd
+  openocd_search:
+    - /home/puneeth/zephyr-sdk-1.0.1/hosttools/sysroots/x86_64-pokysdk-linux/usr/share/openocd/scripts
+
+# Runner specific arguments
+args:
+  openocd:
+    - --cmd-load
+    - flash write_image erase
+    - --cmd-verify
+    - verify_image
+    - --config=/home/puneeth/zephyrproject/zephyr/boards/antmicro/stm32h7_renode_reference_board/support/stm32h7xx_over_ft4232h-jtag.cfg
+  renode:
+    - --renode-command=$elf=@/home/puneeth/renode-bringup-project/zephyr_app/build/zephyr/zephyr.elf
+    - --renode-command=include @/home/puneeth/zephyrproject/zephyr/boards/antmicro/stm32h7_renode_reference_board/support/stm32h7_renode_reference_board.resc
+  renode-robot:
+    - --renode-robot-arg=--variable=ELF:@/home/puneeth/renode-bringup-project/zephyr_app/build/zephyr/zephyr.elf
+    - --renode-robot-arg=--variable=RESC:@/home/puneeth/zephyrproject/zephyr/boards/antmicro/stm32h7_renode_reference_board/support/stm32h7_renode_reference_board.resc
+    - --renode-robot-arg=--variable=UART:sysbus.usart2
+    - --renode-robot-arg=--variable=KEYWORDS:/home/puneeth/zephyrproject/zephyr/tests/robot/common.robot
+    - --renode-robot-arg=--variable=RESULTS_DIR:/home/puneeth/renode-bringup-project/zephyr_app/build
