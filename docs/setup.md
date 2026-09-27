@@ -80,3 +80,25 @@ Hello World! stm32h7_renode_reference_board/stm32h753xx
 - Every new terminal session needs: `source ~/zephyrproject/.venv/bin/activate`
 - Target board: `stm32h7_renode_reference_board` (Antmicro's Renode reference platform, STM32H7/Cortex-M7)
 - Renode `run` target runs headless by default (no GUI window) when invoked via `west build -t run`
+
+## 7. Build the interrupt-driven app with watchdog fault recovery
+
+```bash
+cd ~/zephyrproject/zephyr
+west build -p always -b stm32h7_renode_reference_board \
+    -s ~/renode-bringup-project/zephyr_app \
+    -d ~/renode-bringup-project/zephyr_app/build
+```
+
+## 8. Run the full custom platform (custom peripheral + IRQ + watchdog) via the .resc script
+
+```bash
+cd ~/renode-bringup-project
+renode platform/custom_board_irq.resc
+```
+
+This boots Zephyr against our custom `.repl` (with the C# `EventCounterIRQ` peripheral wired
+to NVIC line 150), and loops indefinitely: boot → interrupt fires and is handled → watchdog
+fed 3 times → watchdog deliberately starved → clean reset → reboot.
+
+See `docs/notes.md` for a full log of issues hit along the way and how they were resolved.
