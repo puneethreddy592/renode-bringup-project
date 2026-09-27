@@ -4,6 +4,12 @@ Simulated SoC bring-up project: modeling a custom memory-mapped peripheral in Re
 writing its device tree binding, and implementing a Zephyr RTOS driver from scratch —
 covering boot, interrupt handling, and fault recovery, without physical hardware.
 
+## Demo
+
+![Boot-to-crash-to-recovery demo](docs/demo.gif)
+
+Each cycle: Zephyr boots → custom peripheral driver initializes → interrupt fires and is handled by the ISR → watchdog is fed a few times → watchdog is deliberately starved → clean reset → reboot, looping indefinitely.
+
 ## Environment
 - Renode v1.17.0
 - Zephyr v4.4.0 (west-managed workspace)
