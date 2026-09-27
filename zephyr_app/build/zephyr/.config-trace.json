@@ -803,7 +803,7 @@
     "CONFIG_NUM_IRQS",
     "n",
     "int",
-    "102",
+    "151",
     "default",
     [
       "/home/puneeth/zephyrproject/zephyr/soc/st/stm32/Kconfig.defconfig",

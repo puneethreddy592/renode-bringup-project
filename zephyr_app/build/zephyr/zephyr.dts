@@ -1998,7 +1998,8 @@
 		eventcounter0: event-counter@a0000000 {
 			compatible = "zephyr,event-counter"; /* in ../renode-bringup-project/zephyr_app/boards/stm32h7_renode_reference_board.overlay:4 */
 			reg = < 0xa0000000 0x1000 >;         /* in ../renode-bringup-project/zephyr_app/boards/stm32h7_renode_reference_board.overlay:5 */
-			status = "okay";                     /* in ../renode-bringup-project/zephyr_app/boards/stm32h7_renode_reference_board.overlay:6 */
+			interrupts = < 0x96 0x0 >;           /* in ../renode-bringup-project/zephyr_app/boards/stm32h7_renode_reference_board.overlay:6 */
+			status = "okay";                     /* in ../renode-bringup-project/zephyr_app/boards/stm32h7_renode_reference_board.overlay:7 */
 		};
 	};
 

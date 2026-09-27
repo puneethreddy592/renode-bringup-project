@@ -3,6 +3,7 @@
 		eventcounter0: event-counter@a0000000 {
 			compatible = "zephyr,event-counter";
 			reg = <0xa0000000 0x1000>;
+			interrupts = <150 0>;
 			status = "okay";
 		};
 	};

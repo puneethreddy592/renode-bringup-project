@@ -21,13 +21,17 @@ int main(void)
 	printk("Enabled. Status=%u Count=%u\n",
 	       event_counter_get_status(ec), event_counter_get_count(ec));
 
+	printk("Triggering event and waiting for ISR...\n");
 	event_counter_trigger(ec);
-	printk("After trigger: Status=%u Count=%u\n",
-	       event_counter_get_status(ec), event_counter_get_count(ec));
 
-	event_counter_clear_status(ec);
-	printk("After clear: Status=%u Count=%u\n",
-	       event_counter_get_status(ec), event_counter_get_count(ec));
+	int ret = event_counter_wait_for_event(ec, K_SECONDS(2));
+
+	if (ret == 0) {
+		printk("ISR fired! Status=%u Count=%u\n",
+		       event_counter_get_status(ec), event_counter_get_count(ec));
+	} else {
+		printk("Timed out waiting for interrupt!\n");
+	}
 
 	return 0;
 }

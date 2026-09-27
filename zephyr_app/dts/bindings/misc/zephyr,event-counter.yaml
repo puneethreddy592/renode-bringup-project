@@ -1,4 +1,4 @@
-description: Custom simulated event-counter peripheral (Renode)
+description: Custom simulated event-counter peripheral (Renode) with interrupt support
 
 compatible: "zephyr,event-counter"
 
@@ -6,4 +6,6 @@ include: base.yaml
 
 properties:
   reg:
+    required: true
+  interrupts:
     required: true

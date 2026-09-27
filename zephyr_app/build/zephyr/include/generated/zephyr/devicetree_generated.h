@@ -889,6 +889,7 @@
 	102, /* /soc/dma@40020400 */ \
 	103, /* /soc/dma@52001000 */ \
 	104, /* /soc/dmamux@58025800 */ \
+	105, /* /soc/event-counter@a0000000 */ \
 	106, /* /soc/dmamux@40020800 */ \
 	107, /* /soc/i2s@40003800 */ \
 	108, /* /soc/i2s@40003c00 */ \
@@ -16483,7 +16484,8 @@
 
 /* Ordinals for what this node depends on directly: */
 #define DT_N_S_soc_S_event_counter_a0000000_REQUIRES_ORDS \
-	3, /* /soc */
+	3, /* /soc */ \
+	4, /* /soc/interrupt-controller@e000e100 */
 
 /* Ordinals for what depends directly on this node: */
 #define DT_N_S_soc_S_event_counter_a0000000_SUPPORTS_ORDS /* nothing */
@@ -16507,8 +16509,15 @@
 #define DT_N_S_soc_S_event_counter_a0000000_FOREACH_RANGE(fn) 
 #define DT_N_S_soc_S_event_counter_a0000000_NUM_DMA_RANGES 0
 #define DT_N_S_soc_S_event_counter_a0000000_FOREACH_DMA_RANGE(fn) 
-#define DT_N_S_soc_S_event_counter_a0000000_IRQ_NUM 0
-#define DT_N_S_soc_S_event_counter_a0000000_IRQ_LEVEL 0
+#define DT_N_S_soc_S_event_counter_a0000000_IRQ_NUM 1
+#define DT_N_S_soc_S_event_counter_a0000000_IRQ_IDX_0_EXISTS 1
+#define DT_N_S_soc_S_event_counter_a0000000_IRQ_IDX_0_VAL_irq 150
+#define DT_N_S_soc_S_event_counter_a0000000_IRQ_IDX_0_VAL_irq_EXISTS 1
+#define DT_N_S_soc_S_event_counter_a0000000_IRQ_IDX_0_EXISTS 1
+#define DT_N_S_soc_S_event_counter_a0000000_IRQ_IDX_0_VAL_priority 0
+#define DT_N_S_soc_S_event_counter_a0000000_IRQ_IDX_0_VAL_priority_EXISTS 1
+#define DT_N_S_soc_S_event_counter_a0000000_IRQ_IDX_0_CONTROLLER DT_N_S_soc_S_interrupt_controller_e000e100
+#define DT_N_S_soc_S_event_counter_a0000000_IRQ_LEVEL 1
 #define DT_N_S_soc_S_event_counter_a0000000_BINDING_COMPAT_TOKEN zephyr_event_counter
 #define DT_N_S_soc_S_event_counter_a0000000_BINDING_COMPAT_UPPER_TOKEN ZEPHYR_EVENT_COUNTER
 #define DT_N_S_soc_S_event_counter_a0000000_BINDING_COMPAT_UNQUOTED zephyr,event-counter
@@ -16529,6 +16538,12 @@
 #define DT_N_S_soc_S_event_counter_a0000000_P_reg_IDX_1_EXISTS 1
 #define DT_N_S_soc_S_event_counter_a0000000_P_reg_IDX_1 4096
 #define DT_N_S_soc_S_event_counter_a0000000_P_reg_EXISTS 1
+#define DT_N_S_soc_S_event_counter_a0000000_P_interrupts {150 /* 0x96 */, 0 /* 0x0 */}
+#define DT_N_S_soc_S_event_counter_a0000000_P_interrupts_IDX_0_EXISTS 1
+#define DT_N_S_soc_S_event_counter_a0000000_P_interrupts_IDX_0 150
+#define DT_N_S_soc_S_event_counter_a0000000_P_interrupts_IDX_1_EXISTS 1
+#define DT_N_S_soc_S_event_counter_a0000000_P_interrupts_IDX_1 0
+#define DT_N_S_soc_S_event_counter_a0000000_P_interrupts_EXISTS 1
 #define DT_N_S_soc_S_event_counter_a0000000_P_status "okay"
 #define DT_N_S_soc_S_event_counter_a0000000_P_status_STRING_UNQUOTED okay
 #define DT_N_S_soc_S_event_counter_a0000000_P_status_STRING_TOKEN okay

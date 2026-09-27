@@ -3116,6 +3116,7 @@ set_target_properties(${DEVICETREE_TARGET}
     "DT_NODE|/soc/event-counter@a0000000" TRUE
     "DT_NODELABEL|eventcounter0" "/soc/event-counter@a0000000"
     "DT_PROP|/soc/event-counter@a0000000|reg" "2684354560;4096"
+    "DT_PROP|/soc/event-counter@a0000000|interrupts" "150;0"
     "DT_PROP|/soc/event-counter@a0000000|status" "okay"
     "DT_PROP|/soc/event-counter@a0000000|compatible" "zephyr,event-counter"
     "DT_PROP|/soc/event-counter@a0000000|dma-coherent" "False"
