@@ -14,7 +14,7 @@ covering boot, interrupt handling, and fault recovery, without physical hardware
 - [x] Zephyr `hello_world` sample built and booted inside Renode
 - [x] Custom peripheral modeled in Renode (.repl) — register-verified in isolation
 - [x] Zephyr driver + device tree binding written — verified end-to-end boot log
-- [ ] Interrupt handling verified end-to-end
+- [x] Interrupt handling verified end-to-end — Zephyr ISR confirmed via boot log
 - [ ] Watchdog / low-power integration
 
 ## Setup (for reproducing)
