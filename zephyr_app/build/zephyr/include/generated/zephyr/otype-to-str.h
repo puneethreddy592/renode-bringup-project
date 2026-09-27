@@ -47,6 +47,7 @@ case K_OBJ_SENSOR_DECODER_API: ret = "sensor_decoder_api"; break;
 /* Driver subsystems */
 case K_OBJ_DRIVER_GPIO: ret = "gpio driver"; break;
 case K_OBJ_DRIVER_RESET: ret = "reset driver"; break;
+case K_OBJ_DRIVER_WDT: ret = "wdt driver"; break;
 case K_OBJ_DRIVER_SHARED_IRQ: ret = "shared_irq driver"; break;
 case K_OBJ_DRIVER_AUDIO_CODEC: ret = "audio_codec driver"; break;
 case K_OBJ_DRIVER_DMIC: ret = "dmic driver"; break;
@@ -125,7 +126,6 @@ case K_OBJ_DRIVER_UAOL: ret = "uaol driver"; break;
 case K_OBJ_DRIVER_VIDEO: ret = "video driver"; break;
 case K_OBJ_DRIVER_VIRTIO: ret = "virtio driver"; break;
 case K_OBJ_DRIVER_W1: ret = "w1 driver"; break;
-case K_OBJ_DRIVER_WDT: ret = "wdt driver"; break;
 case K_OBJ_DRIVER_WUC: ret = "wuc driver"; break;
 case K_OBJ_DRIVER_CAN_TRANSCEIVER: ret = "can_transceiver driver"; break;
 case K_OBJ_DRIVER_NRF_CLOCK_CONTROL: ret = "nrf_clock_control driver"; break;

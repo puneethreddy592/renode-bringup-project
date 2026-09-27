@@ -4,6 +4,8 @@ SECTION_PROLOGUE(device_api_area,,SUBALIGN(4))
 	PLACE_SYMBOL_HERE(_gpio_driver_api_ext_end);
 	Z_LINK_ITERABLE(reset_driver_api);
 	PLACE_SYMBOL_HERE(_reset_driver_api_ext_end);
+	Z_LINK_ITERABLE(wdt_driver_api);
+	PLACE_SYMBOL_HERE(_wdt_driver_api_ext_end);
 	Z_LINK_ITERABLE(shared_irq_driver_api);
 	PLACE_SYMBOL_HERE(_shared_irq_driver_api_ext_end);
 	Z_LINK_ITERABLE(audio_codec_driver_api);
@@ -162,8 +164,6 @@ SECTION_PROLOGUE(device_api_area,,SUBALIGN(4))
 	PLACE_SYMBOL_HERE(_virtio_driver_api_ext_end);
 	Z_LINK_ITERABLE(w1_driver_api);
 	PLACE_SYMBOL_HERE(_w1_driver_api_ext_end);
-	Z_LINK_ITERABLE(wdt_driver_api);
-	PLACE_SYMBOL_HERE(_wdt_driver_api_ext_end);
 	Z_LINK_ITERABLE(wuc_driver_api);
 	PLACE_SYMBOL_HERE(_wuc_driver_api_ext_end);
 	Z_LINK_ITERABLE(can_transceiver_driver_api);

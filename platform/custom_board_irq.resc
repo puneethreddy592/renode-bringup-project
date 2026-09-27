@@ -1,0 +1,20 @@
+:name: Custom Event Counter Bring-up Board
+:description: STM32H7 Renode Reference Platform + custom C# event-counter peripheral with IRQ
+
+$name?="Custom Event Counter Bring-up Board"
+mach create $name
+
+i @/home/puneeth/renode-bringup-project/peripherals/EventCounterIRQ.cs
+machine LoadPlatformDescription @/home/puneeth/renode-bringup-project/platform/custom_board_irq.repl
+
+showAnalyzer sysbus.usart2
+
+$elf?=@/home/puneeth/renode-bringup-project/zephyr_app/build/zephyr/zephyr.elf
+
+macro reset
+"""
+    sysbus LoadELF $elf
+    cpu EnableZephyrMode "CONFIG_TICKLESS_KERNEL"
+    cpu VectorTableOffset `sysbus GetSymbolAddress "_vector_table"`
+"""
+runMacro $reset

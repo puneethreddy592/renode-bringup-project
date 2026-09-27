@@ -1709,9 +1709,12 @@
     "CONFIG_WATCHDOG",
     "y",
     "bool",
-    null,
-    "unset",
-    null
+    "y",
+    "assign",
+    [
+      "/home/puneeth/renode-bringup-project/zephyr_app/prj.conf",
+      3
+    ]
   ],
   [
     "CONFIG_ICACHE",
@@ -6382,6 +6385,100 @@
     null,
     "unset",
     null
+  ],
+  [
+    "CONFIG_HAS_WDT_NO_CALLBACKS",
+    "n",
+    "bool",
+    "y",
+    "select",
+    [
+      "IWDG_STM32 && DT_HAS_ST_STM32_WATCHDOG_ENABLED && WATCHDOG"
+    ]
+  ],
+  [
+    "CONFIG_WDT_LOG_LEVEL_OFF",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_WDT_LOG_LEVEL_ERR",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_WDT_LOG_LEVEL_WRN",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_WDT_LOG_LEVEL_INF",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_WDT_LOG_LEVEL_DBG",
+    "y",
+    "bool",
+    null,
+    "unset",
+    null
+  ],
+  [
+    "CONFIG_WDT_LOG_LEVEL_DEFAULT",
+    "y",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/puneeth/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
+      5
+    ]
+  ],
+  [
+    "CONFIG_WDT_LOG_LEVEL",
+    "n",
+    "int",
+    "3",
+    "default",
+    [
+      "/home/puneeth/zephyrproject/zephyr/subsys/logging/Kconfig.template.log_config",
+      36
+    ]
+  ],
+  [
+    "CONFIG_IWDG_STM32",
+    "y",
+    "bool",
+    "y",
+    "default",
+    [
+      "/home/puneeth/zephyrproject/zephyr/drivers/watchdog/Kconfig.stm32",
+      10
+    ]
+  ],
+  [
+    "CONFIG_IWDG_STM32_INITIAL_TIMEOUT",
+    "y",
+    "int",
+    "100",
+    "default",
+    [
+      "/home/puneeth/zephyrproject/zephyr/drivers/watchdog/Kconfig.stm32",
+      20
+    ]
   ],
   [
     "CONFIG_TEE",

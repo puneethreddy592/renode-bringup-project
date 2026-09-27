@@ -13,6 +13,7 @@
     "__subsystem": [
         "gpio_driver_api",
         "reset_driver_api",
+        "wdt_driver_api",
         "shared_irq_driver_api",
         "audio_codec_driver_api",
         "dmic_driver_api",
@@ -100,7 +101,6 @@
         "video_driver_api",
         "virtio_driver_api",
         "w1_driver_api",
-        "wdt_driver_api",
         "wuc_driver_api",
         "can_transceiver_driver_api",
         {

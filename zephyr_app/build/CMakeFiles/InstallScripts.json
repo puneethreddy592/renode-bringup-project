@@ -76,6 +76,7 @@
 		"/home/puneeth/renode-bringup-project/zephyr_app/build/zephyr/drivers/reset/cmake_install.cmake",
 		"/home/puneeth/renode-bringup-project/zephyr_app/build/zephyr/drivers/serial/cmake_install.cmake",
 		"/home/puneeth/renode-bringup-project/zephyr_app/build/zephyr/drivers/timer/cmake_install.cmake",
+		"/home/puneeth/renode-bringup-project/zephyr_app/build/zephyr/drivers/watchdog/cmake_install.cmake",
 		"/home/puneeth/renode-bringup-project/zephyr_app/build/modules/acpica/cmake_install.cmake",
 		"/home/puneeth/renode-bringup-project/zephyr_app/build/modules/cmsis/cmake_install.cmake",
 		"/home/puneeth/renode-bringup-project/zephyr_app/build/modules/cmsis-dsp/cmake_install.cmake",

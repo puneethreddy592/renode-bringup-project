@@ -202,6 +202,9 @@
 /home/puneeth/renode-bringup-project/zephyr_app/build/zephyr/drivers/timer/CMakeFiles/drivers__timer.dir
 /home/puneeth/renode-bringup-project/zephyr_app/build/zephyr/drivers/timer/CMakeFiles/edit_cache.dir
 /home/puneeth/renode-bringup-project/zephyr_app/build/zephyr/drivers/timer/CMakeFiles/rebuild_cache.dir
+/home/puneeth/renode-bringup-project/zephyr_app/build/zephyr/drivers/watchdog/CMakeFiles/drivers__watchdog.dir
+/home/puneeth/renode-bringup-project/zephyr_app/build/zephyr/drivers/watchdog/CMakeFiles/edit_cache.dir
+/home/puneeth/renode-bringup-project/zephyr_app/build/zephyr/drivers/watchdog/CMakeFiles/rebuild_cache.dir
 /home/puneeth/renode-bringup-project/zephyr_app/build/modules/acpica/CMakeFiles/edit_cache.dir
 /home/puneeth/renode-bringup-project/zephyr_app/build/modules/acpica/CMakeFiles/rebuild_cache.dir
 /home/puneeth/renode-bringup-project/zephyr_app/build/modules/cmsis/CMakeFiles/edit_cache.dir

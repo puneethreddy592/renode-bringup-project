@@ -131,6 +131,8 @@ device_api_area : SUBALIGN(4)
  _gpio_driver_api_ext_end = .;
  _reset_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._reset_driver_api.static.*))); _reset_driver_api_list_end = .;;
  _reset_driver_api_ext_end = .;
+ _wdt_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._wdt_driver_api.static.*))); _wdt_driver_api_list_end = .;;
+ _wdt_driver_api_ext_end = .;
  _shared_irq_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._shared_irq_driver_api.static.*))); _shared_irq_driver_api_list_end = .;;
  _shared_irq_driver_api_ext_end = .;
  _audio_codec_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._audio_codec_driver_api.static.*))); _audio_codec_driver_api_list_end = .;;
@@ -289,8 +291,6 @@ device_api_area : SUBALIGN(4)
  _virtio_driver_api_ext_end = .;
  _w1_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._w1_driver_api.static.*))); _w1_driver_api_list_end = .;;
  _w1_driver_api_ext_end = .;
- _wdt_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._wdt_driver_api.static.*))); _wdt_driver_api_list_end = .;;
- _wdt_driver_api_ext_end = .;
  _wuc_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._wuc_driver_api.static.*))); _wuc_driver_api_list_end = .;;
  _wuc_driver_api_ext_end = .;
  _can_transceiver_driver_api_list_start = .; KEEP(*(SORT_BY_NAME(._can_transceiver_driver_api.static.*))); _can_transceiver_driver_api_list_end = .;;

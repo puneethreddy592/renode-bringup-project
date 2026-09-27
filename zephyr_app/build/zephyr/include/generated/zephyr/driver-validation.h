@@ -8,6 +8,8 @@
 
 #define K_SYSCALL_DRIVER_RESET(ptr, op) K_SYSCALL_DRIVER_GEN(ptr, op, reset, RESET)
 
+#define K_SYSCALL_DRIVER_WDT(ptr, op) K_SYSCALL_DRIVER_GEN(ptr, op, wdt, WDT)
+
 #define K_SYSCALL_DRIVER_SHARED_IRQ(ptr, op) K_SYSCALL_DRIVER_GEN(ptr, op, shared_irq, SHARED_IRQ)
 
 #define K_SYSCALL_DRIVER_AUDIO_CODEC(ptr, op) K_SYSCALL_DRIVER_GEN(ptr, op, audio_codec, AUDIO_CODEC)
@@ -163,8 +165,6 @@
 #define K_SYSCALL_DRIVER_VIRTIO(ptr, op) K_SYSCALL_DRIVER_GEN(ptr, op, virtio, VIRTIO)
 
 #define K_SYSCALL_DRIVER_W1(ptr, op) K_SYSCALL_DRIVER_GEN(ptr, op, w1, W1)
-
-#define K_SYSCALL_DRIVER_WDT(ptr, op) K_SYSCALL_DRIVER_GEN(ptr, op, wdt, WDT)
 
 #define K_SYSCALL_DRIVER_WUC(ptr, op) K_SYSCALL_DRIVER_GEN(ptr, op, wuc, WUC)
 
